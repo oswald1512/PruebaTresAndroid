@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">OH Company</string>
+    <string name="titulo_registro">Registro de Alumnos</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_apellido">Apellido</string>
+    <string name="hint_nota">Nota</string>
+    <string name="btn_guardar">Guardar</string>
+    <string name="btn_cancelar">Cancelar</string>
+
+    <string name="hint_titulo">Título</string>
+    <string name="hint_descripcion">Descripción</string>
+    <string name="hint_tipo">Tipo</string>
+    <string name="hint_enlace">Enlace</string>
+    <string name="hint_imagen">Imagen</string>
+    <string name="btn_crear">Crear</string>
+    <string name="btn_actualizar">Actualizar</string>
+    <string name="btn_eliminar">Eliminar</string>
+</resources>

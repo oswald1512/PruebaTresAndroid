@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Título general arriba -->
+    <TextView
+        android:id="@+id/tituloRecursos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recursos"
+        android:textColor="#CDDC39"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Contenedor principal 50/50 con RV y formulario -->
+    <LinearLayout
+        android:id="@+id/contenedorPrincipal"
+        android:orientation="vertical"
+        android:background="#000000"
+        android:padding="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="6dp"
+        android:alpha="0.95"
+        app:layout_constraintTop_toBottomOf="@id/tituloRecursos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- RecyclerView parte superior -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="12dp"
+            android:background="#000000" />
+
+        <!-- Formulario parte inferior -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Campo de búsqueda -->
+                <EditText
+                    android:id="@+id/searchEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Buscar recurso..."
+                    android:textColorHint="#B0BEC5"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#CDDC39"
+                    android:drawableStart="@android:drawable/ic_menu_search"
+                    android:padding="8dp"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Campos del formulario -->
+                <EditText android:id="@+id/editTextTitulo" android:hint="Título" style="@style/CustomInput" />
+                <EditText android:id="@+id/editTextDescripcion" android:hint="Descripción" style="@style/CustomInput" />
+                <EditText android:id="@+id/editTextTipo" android:hint="Tipo" style="@style/CustomInput" />
+                <EditText android:id="@+id/editTextEnlace" android:hint="Enlace" style="@style/CustomInput" />
+                <EditText android:id="@+id/editTextImagen" android:hint="Imagen" style="@style/CustomInput" />
+
+                <!-- Botones Crear y Actualizar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp">
+
+                    <Button
+                        android:id="@+id/btnCrear"
+                        android:text="Crear"
+                        style="@style/CustomButton"
+                        android:layout_margin="6dp" />
+
+                    <Button
+                        android:id="@+id/btnActualizar"
+                        android:text="Actualizar"
+                        style="@style/CustomButton"
+                        android:layout_margin="6dp" />
+                </LinearLayout>
+
+                <!-- Botón Eliminar -->
+                <Button
+                    android:id="@+id/btnEliminar"
+                    android:text="Eliminar"
+                    style="@style/CustomButton"
+                    android:layout_margin="6dp"
+                    android:backgroundTint="#FFB74D"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center_horizontal" />
+
+                <!-- Botones Limpiar y Cerrar sesión -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnLimpiar"
+                        android:text="Limpiar"
+                        android:backgroundTint="#757575"
+                        style="@style/CustomButton"
+                        android:layout_margin="6dp" />
+
+                    <Button
+                        android:id="@+id/btnCerrarSesion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cerrar sesión"
+                        style="@style/CustomButton"
+                        android:layout_margin="6dp"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#FF6F61" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
